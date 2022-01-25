@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) 2020, Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+// &uart0 {
+// 	status = "okay";
+// 	current-speed = <115200>;
+// 	tx-pin = < 0xf >; //15
+// 	rx-pin = < 0x10 >; //16
+// 	rts-pin = < 0xd >; //13
+// 	cts-pin = < 0xe >; //14
+// };
+
+// &uart1 {
+// 	status = "okay";
+// 	current-speed = <115200>;
+// 	tx-pin = < 0x1d >; //29
+// 	rx-pin = < 0x1c >; //28
+// 	rts-pin = < 0x1b >; //27
+// 	cts-pin = < 0x1a >; //26
+// };
+&uart0 {
+	status = "okay";
+	compatible = "nordic,nrf-uarte";
+	current-speed = <115200>;
+	// draeger module (new):
+	tx-pin = <13>;
+	rx-pin = <14>;
+	rts-pin = <16>;
+	cts-pin = <17>;
+};
+&uart1 {
+	status = "okay";
+	compatible = "nordic,nrf-uarte";
+	current-speed = <115200>;
+	// draeger module (new):
+	tx-pin = <30>;
+	rx-pin = <28>;
+	rts-pin = <2>;
+	cts-pin = <3>;
+};
